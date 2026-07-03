@@ -5,8 +5,6 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,6 +29,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Direct Framework Bypass Tag */}
+        <meta name="google-site-verification" content="k8JSUpxTAAwsmoIJPvRxbGSlXbIipqrXEcQKypBjHAo" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -40,12 +42,11 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
-        <Header />
-       
-        {children}
-        <Toaster position="top-center"/>
-        <Footer />
-        </ThemeProvider>
+            <Header />
+            {children}
+            <Toaster position="top-center"/>
+            <Footer />
+         </ThemeProvider>
       </body>
     </html>
   );
