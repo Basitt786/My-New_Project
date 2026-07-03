@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css"; // sub-folder mein hone ki wajah se yahan ../ chalega
+import "./globals.css"; // sub-folder mein hone ki wajah se yahan ../ chalega
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
